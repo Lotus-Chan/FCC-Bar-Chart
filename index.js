@@ -10,10 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
     let json = JSON.parse(req.responseText);
     let jsonDatesYearsOnly = json.data.map((dates) => dates[0].slice(0, 4));
 
+    // Defines svg parameters
     const w = 900;
     const h = 500;
     const padding = { top: 20, bottom: 40, left: 50, right: 20 };
 
+    // Defines scale of X
     const xScale = d3
       .scaleTime()
       .domain([
@@ -22,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ])
       .range([padding.left, w - padding.right]);
 
+    // Defines scale of Y
     const yScale = d3
       .scaleLinear()
       .domain([0, d3.max(json.data, (d) => d[1])])
