@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+  font-family: "Helvetica", sans-serif;
+  background-color: #7995af;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+#container {
+  position: relative;
+  background-color: #dddddd;
+  border: 1px solid #968c76;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.tooltip {
+  position: absolute;
+  text-align: center;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  border: 2px solid black;
+  background-color: lightgray;
+  border-radius: 7px;
+  pointer-events: none;
+}
+
+.bar:hover {
+  fill: #b0f2c5;
+}
